@@ -1,5 +1,8 @@
 package beans;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="Order")
 public class Order {
 
 	private int orderNumber = 0;
@@ -19,6 +22,13 @@ public class Order {
 		this.productName = productName;
 		this.price = price;
 		this.qty = qty;
+	}
+	
+	public Order() {
+		orderNumber = 0;
+		productName = "";
+		price = 0;
+		qty = 0;
 	}
 
 	/**
